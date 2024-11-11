@@ -81,7 +81,6 @@ import sys
 filename = sys.argv[0]
 
 # open sequences file
-###open('make_seq.out.txt' , 'r')
 input = open('make_seq.out.txt' , 'r')
 
 full_seq = input.readline()
@@ -93,8 +92,8 @@ for line in input:
 sequences[0]= full_seq[0:100]
 
 
-print('>original')
-print full_seq
+print('Original sequence:')
+print(f'{full_seq}')
 
 
 verteces = assign_verteces(sequences, k)
@@ -103,9 +102,7 @@ out_edges = assign_edges(sequences, k)
 
 contig = make_contig(0, out_edges, verteces)
 
-print '>contig 1'
-print contig
-    
-print 'Original len: %s    recon len %s' % (len(full_seq), len(contig))
+print('After assembly, the contiguous sequence is:')
+print(f'{contig}')
 
-    
+print('Original length: %s    After assembly length: %s' % (len(full_seq), len(contig)))
