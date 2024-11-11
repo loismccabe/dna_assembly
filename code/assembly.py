@@ -81,7 +81,7 @@ import sys
 filename = sys.argv[0]
 
 # open sequences file
-input = open('make_seq.out.txt' , 'r')
+input = open('seq_frags/make_seq.out.txt' , 'r')
 
 full_seq = input.readline()
 
